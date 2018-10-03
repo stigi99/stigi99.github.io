@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+  canvas {
     border:1px solid #d3d3d3;
     background-color: #f1f1f1;
-}
+  }
+
 </style>
 </head>
 <body onload="startGame()">
-<script type="text/javascript" src="gra.js"></script>
+  <script type="text/javascript" src="gra.js">
+  document.getElementById("odwrut").innerHTML += "tekst do odwrocenia"
+
+
+</script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
-<a href="matma.html" > matma </a>
-</body>
-</html>
+    <abbr title="to daje podpowiedz">Podpowiedz</abbr><br>
+    <em> podkreslony tekst </em>
+    <a href="matma.html" > matma </a>
+    <adress>
+      Country: Poland <br>
+      name: Mateusz <br>
+      Surname: Misiak <br>
+      <bdo  id= "odwrut" dir="rtl"></bdo><br>
+<script> document.getElementById("odwrut").innerHTML += "tekst do odwrocenia" </script>
+<audio controls>
+  <source src="satie.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+    </audio> <br>
+      <cite> Gymnopedie </cite>
+    </adress>
+  </body>
+  </html>
