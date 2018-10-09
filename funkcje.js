@@ -1,4 +1,27 @@
-  function sinus(){
+ function array()
+ {
+ var liczby =prompt("podaj liczby","1,2,3").split(",");
+ var pierwszy = liczby[0];
+ var ostatni =liczby[liczby.length-1];
+ if (liczby.length%2==1){
+ var srodek=liczby.length/2;
+ srodek=Math.floor(srodek);
+ document.getElementById("array").innerHTML="srodek wynosi "+liczby[srodek]+"pierwszy wyraz wynosi "+pierwszy+"ostatni wyraz wynosi "+ostatni;
+ }
+else {
+var srodek=liczby.length/2;
+var srodek1=srodek-1;
+var srodek2=srodek;	
+document.getElementById("array").innerHTML="srodek wynosi "+liczby[srodek1]+","+liczby[srodek2]+" pierwszy wyraz wynosi "+pierwszy+" ostatni wyraz wynosi "+ostatni;
+}
+
+
+ }
+
+
+
+
+ function sinus(){
     var cos;
   var sin= prompt("Podaj sinusa",);
 
@@ -96,8 +119,7 @@ function wzorherona(){
 
 
 }
-function gra(){
-	var up = false,
+var up = false,
     right = false,
     down = false,
     left = false,
@@ -152,4 +174,4 @@ function gameLoop(){
   window.requestAnimationFrame(gameLoop)
 }
 window.requestAnimationFrame(gameLoop)
-}
+
