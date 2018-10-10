@@ -12,15 +12,10 @@ else {
 var srodek=liczby.length/2;
 var srodek1=srodek-1;
 var srodek2=srodek;	
-document.getElementById("array").innerHTML="srodek wynosi "+liczby[srodek1]+","+liczby[srodek2]+" pierwszy wyraz wynosi "+pierwszy+" ostatni wyraz wynosi "+ostatni;
+document.getElementById("array").innerHTML="srodek wynosi "+liczby[srodek1]+" "+liczby[srodek2]+" pierwszy wyraz wynosi "+pierwszy+" ostatni wyraz wynosi "+ostatni;
 }
 
-
  }
-
-
-
-
  function sinus(){
     var cos;
   var sin= prompt("Podaj sinusa",);
@@ -86,6 +81,8 @@ function srodektrojkata(){
 
 function odlegloscpunktuprosta(){
   var a1, a2, a3, x, y, d ;
+  var funkcja=prompt("podaj funkcje",funkcja)
+  
   a1=prompt("podaj punkt A ", a1 );
     a2=prompt("podaj punkt B ", a2 );
     a3=prompt("podaj punkt C ", a3 );
@@ -139,6 +136,7 @@ function press(e){
   if (e.keyCode === 37 /* left */ || e.keyCode === 65 /* a */ || e.keyCode === 81 /* q */){
     left = true
   }
+
 }
 document.addEventListener('keyup',release)
 function release(e){
@@ -159,19 +157,33 @@ function gameLoop(){
   var div = document.querySelector('div')
   if (up){
     y = y - 10
+    
   }
   if (right){
     x = x + 10
   }
   if (down){
     y = y + 10
-  }
+      }
   if (left){
     x = x - 10
   }
-  div.style.left = x+'px'
-  div.style.top = y+'px'
-  window.requestAnimationFrame(gameLoop)
+  div.style.left = x;
+ if (x>1000){
+   x= x-10
+ }
+ if (x<0)
+ {
+   x= x+10
+ }
+  div.style.top = y;
+  if (y>700){
+    y = y-10
+  }
+  if (y<0){
+    y = y + 10
+  }
+   window.requestAnimationFrame(gameLoop)
 }
 window.requestAnimationFrame(gameLoop)
 

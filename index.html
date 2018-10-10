@@ -20,7 +20,7 @@ background-color: pink;
 font-size: 27px;
 font-family: "Times New Roman";
 margin: 0px;
-position: absolute;
+position: relative;
  overflow: hidden;
 right: 0;
 top: 0;
@@ -29,27 +29,30 @@ top: 0;
 
 </style>
 
-</style>
+
 </head>
 <body onload="startGame()">
 
   <script type="text/javascript" src="gra.js">
 </script>
-<iframe style="float: right; position: fixed; " width="480" height="270" src="https://www.youtube.com/embed/YSgpU70MZno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <div id ="stopka"style="float:right " ><p> お前はもう死んでいる </p>
 <p>nani omae wa mou shindeiru</p><p>You Are Already Dead</p></div>
+<iframe style="float: right; position: relative;" width= "480" height="270" src="https://www.youtube.com/embed/YSgpU70MZno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
     <abbr title="to daje podpowiedz">Podpowiedz</abbr><br>
+	<img src="impresja.jpg" alt="impresja" /> <br>
     <em> podkreslony tekst </em>
     <a href="matma.html" > matma </a>
     <adress>
       Country: Poland <br>
       name: Mateusz <br>
-      Surname: Misiak <br>
+      Surname: Misiak <br>  
+    </adress>
       <bdo  id= "odwrut" dir="rtl"></bdo><br>
 <script> document.getElementById("odwrut").innerHTML += "tekst do odwrocenia" </script>
 <audio controls>
@@ -57,8 +60,10 @@ top: 0;
           Your browser does not support the audio element.
     </audio> <br>
       <cite> Gymnopedie </cite>
+      <a href="d3.html" >d3</a>
+      
 	  
-    </adress>
+  
 	
   </body>
   </html>

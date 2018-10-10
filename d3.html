@@ -1,0 +1,23 @@
+<html>
+<head> <title> Nauka D3 </title>
+    <script src="https://d3js.org/d3.v5.min.js">    
+    </script>
+    </head>
+<body>
+<p> jakis tekst</p>
+<div><h1>jakis h1</h1></div>
+
+
+<script> 
+    d3.select("body").style("background-color", "black");
+ 
+    d3.selectAll("body").style("background-color", function() {
+        return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});
+    </script>
+</body>
+
+
+
+
+</html>
