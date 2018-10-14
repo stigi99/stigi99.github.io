@@ -5,6 +5,8 @@ var font, fontsize = 32;
 function preload(){
     tlo = loadImage("walking.png");
     moon = loadImage("moon.png");
+    usa = loadImage("usa.png");
+    cccp = loadImage("cccp.png");
 }
 
 
@@ -65,7 +67,7 @@ function Bird() {
     this.lift = -15;
     this.velocity = 0;
     this.show = function () {
-               ellipse(this.x, this.y, 32, 32);
+            image(moon, this.x, this.y);
     }
     this.up = function () {
         this.velocity += this.lift;
@@ -94,7 +96,7 @@ function Pipe() {
     this.top = random(height / 2);
     this.bottom = random(height / 2);
     this.x = width;
-    this.w = 20;
+    this.w = 30;
     this.speed = 3;
     this.highlight = false;
     this.hits = function (bird) {
@@ -116,8 +118,8 @@ function Pipe() {
             fill(255, 0, 0)
             score = 0;
         }
-        rect(this.x, 0, this.w, this.top);
-        rect(this.x, height - this.bottom, this.w, this.bottom);
+        image(usa, this.x, 0, this.w, this.top);
+        image(cccp, this.x, height - this.bottom, this.w, this.bottom);
     }
 
     this.update = function () {
