@@ -6,24 +6,37 @@
   canvas {
     border:1px solid #d3d3d3;
     background-color: #f1f1f1;
+    
+   
   }
 body {
-float:left;
+
 margin: 0px;
 width:100%;
 height:100%;
 position: relative;
+margin:auto;
 }
 #stopka {
 color: red;
 background-color: pink;
 font-size: 27px;
 font-family: "Times New Roman";
-margin: 0px;
 position: relative;
  overflow: hidden;
 right: 0;
 top: 0;
+text-align: center;
+width:24%;
+height:20%;
+float: right;
+
+
+}
+#yt {
+position: absolute;
+top: 0;
+
 
 }
 
@@ -35,9 +48,9 @@ top: 0;
 
   <script type="text/javascript" src="gra.js">
 </script>
-<div id ="stopka"style="float:right " ><p> お前はもう死んでいる </p>
+<div id ="stopka" ><p> お前はもう死んでいる </p>
 <p>nani omae wa mou shindeiru</p><p>You Are Already Dead</p></div>
-<iframe style="float: right; position: relative;" width= "480" height="270" src="https://www.youtube.com/embed/YSgpU70MZno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe id="yt" width= "480" height="270" src="https://www.youtube.com/embed/YSgpU70MZno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
