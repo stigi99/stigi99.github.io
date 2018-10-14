@@ -2,16 +2,20 @@ var bird;
 var pipes = [];
 var score = 0;
 var font, fontsize = 32;
+function preload(){
+    tlo = loadImage("walking.png");
+    moon = loadImage("moon.png");
+}
+
+}
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(800, 600, WEBGL);
     bird = new Bird();
     pipes.push(new Pipe());
     textSize(fontsize);
     textFont('Georgia');
     textAlign(CENTER, CENTER);
-    tlo = loadImage("walking.png");
-    moon = loadImage("moon.png");
-}
+    
 function draw() {
     background(tlo);
     scores();
