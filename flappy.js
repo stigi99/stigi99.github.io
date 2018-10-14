@@ -7,14 +7,15 @@ function preload(){
     moon = loadImage("moon.png");
 }
 
-}
+
 function setup() {
-    createCanvas(800, 600, WEBGL);
+    createCanvas(800, 600);
     bird = new Bird();
     pipes.push(new Pipe());
     textSize(fontsize);
     textFont('Georgia');
     textAlign(CENTER, CENTER);
+}
     
 function draw() {
     background(tlo);
@@ -64,8 +65,7 @@ function Bird() {
     this.lift = -15;
     this.velocity = 0;
     this.show = function () {
-        texture(moon);
-        ellipse(this.x, this.y, 32, 32);
+               ellipse(this.x, this.y, 32, 32);
     }
     this.up = function () {
         this.velocity += this.lift;
