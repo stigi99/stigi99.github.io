@@ -10,6 +10,7 @@ function setup() {
     textFont('Georgia');
     textAlign(CENTER, CENTER);
     tlo = loadImage("walking.png");
+    moon = loadImage("moon.png");
 }
 function draw() {
     background(tlo);
@@ -59,8 +60,8 @@ function Bird() {
     this.lift = -15;
     this.velocity = 0;
     this.show = function () {
-        fill(255);
-        ellipse(this.x, this.y, 32, 32)
+        texture(moon);
+        ellipse(this.x, this.y, 32, 32);
     }
     this.up = function () {
         this.velocity += this.lift;
