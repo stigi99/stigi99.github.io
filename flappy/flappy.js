@@ -95,6 +95,10 @@ function Pipe() {
    
     this.top = random(height / 2);
     this.bottom = random(height / 2);
+    if (this.top+20 > this.bottom && this.bottom+20> this.top){
+        this.bottom -=10;
+        this.top -=10;
+    }
     this.x = width;
     this.w = 30;
     this.speed = 3;
