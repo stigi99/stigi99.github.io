@@ -39,6 +39,16 @@ top: 0;
 
 
 }
+#impresja {
+   background-image: url('impresja.jpg');
+     height: 374px;
+   width: 510px;
+}
+#impresja:hover {
+   background-image: url('impresjaa.jpg');
+     height: 570px;
+   width: 760px;
+}
 
 </style>
 
@@ -47,18 +57,16 @@ top: 0;
 <body onload="startGame()">
 
   <script type="text/javascript" src="gra.js">
-</script>
-<div id ="stopka" ><p> お前はもう死んでいる </p>
+  </script>
+ <div id ="stopka" ><p> お前はもう死んでいる </p>
 <p>nani omae wa mou shindeiru</p><p>You Are Already Dead</p></div>
 <iframe id="yt" width= "480" height="270" src="https://www.youtube.com/embed/YSgpU70MZno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-
-<p>Use the ACCELERATE button to stay in the air</p>
-<p>How long can you stay alive?</p>
+<img src="signum.png" alt="signum" style="float: right; position: absolute; right: 0%;"  />
     <abbr title="to daje podpowiedz">Podpowiedz</abbr><br>
-	<img src="impresja.jpg" alt="impresja" /> <br>
+<div id="impresja"></div>
     <em> podkreslony tekst </em>
     <a href="matma.html" > matma </a>
     <adress>
@@ -67,14 +75,15 @@ top: 0;
       Surname: Misiak <br>  
     </adress>
       <bdo  id= "odwrut" dir="rtl"></bdo><br>
-<script> document.getElementById("odwrut").innerHTML += "tekst do odwrocenia" </script>
+
 <audio controls>
   <source src="satie.mp3" type="audio/mp3">
           Your browser does not support the audio element.
     </audio> <br>
       <cite> Gymnopedie </cite>
       <a href="d3.html" >d3</a>
-	  <a class="fileDownloadSimpleRichExperience" href="signum.docx">signum</a>
+	  <a   href="signum.docx">signum</a>
+	  
       
 	  
   
