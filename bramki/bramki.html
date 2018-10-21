@@ -1,0 +1,361 @@
+<html>
+
+<head>
+    <title> BRAMKI LOGICZNE </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <style>
+        @keyframes usuwanko {
+            from {
+                height: 900px;
+                            }
+                            to {
+                                height: 0;
+                          }
+        }
+        body {
+            background: lightblue;
+        }
+        #cointainer {
+                        width: 1010px;
+            position: relative;
+            padding: 0px;
+            text-align: center;
+            background: grey;
+            height: 900px;
+            color: white;
+           margin: auto;
+           
+            
+
+        }
+
+        div.ng-hide {
+            height: 0;
+            width: 0;
+            background-color: transparent;
+            animation: 0.5s usuwanko;
+          
+        }
+        span {
+            color: white;
+            background: green;
+            transition: all linear 0.5s;
+            position: relative;
+            
+                    }
+        span.ng-show {
+            width: 20px;
+            height: 30px;
+            background: white;
+                      
+        }
+
+        table {
+            border: 3px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+
+
+        }
+
+        td,
+        tr {
+            border: 2px solid red;
+            border-collapse: collapse;
+            font-size: 30px;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+
+
+        }
+
+        .bramki {
+
+            width: 250px;
+            border: 1px solid black;
+            float: left;
+            height: 400px;
+            transition: all linear 5.5s;
+            position: relative;
+            
+  
+
+        }
+
+        #Przerzutnik {
+            background: salmon;
+            text-align: left;
+            color: green;
+            padding: 10px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body ng-app="ngAnimate">
+    <p>kliknij tutaj jak chcesz zrezygnować <input type="checkbox" ng-model="usuwanko"><input type="checkbox" ng-model="test"></h1>
+    </p>
+
+    <div id="cointainer" ng-hide="usuwanko">
+
+        <h1>Rodzaje bramek</h1>
+        <div class="bramki">
+            <h4>Bramka AND "Koniunkcja"</h4>
+            <table>
+                <tr>
+                    <td>p</td>
+                    <td>q</td>
+                    <td>p^q</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+
+            <img src="AND.svg">
+        </div>
+        <div class="bramki">
+            <h4>Bramka XOR "Alternatywa rozłączna"</h4>
+            <table>
+                <tr>
+                    <td>p</td>
+                    <td>q</td>
+                    <td>pVq</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+            <img src="xor.png">
+        </div>
+        <div class="bramki">
+            <h4>Bramka OR "Alternatywa "</h4>
+            <table>
+                <tr>
+                    <td>p</td>
+                    <td>q</td>
+                    <td>pVq</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+            <img src="OR.png">
+        </div>
+        <div class="bramki">
+            <h4>Bramka NOR "Binegacja "</h4>
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>A NOR B</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+
+            <img src="nor.png">
+        </div>
+        <div style="clear:both;"></div>
+        <div class="bramki">
+            <h4>Bramka XNOR</h4>
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>Q</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+            <img src="XNOR.svg">
+        </div>
+        <div class="bramki">
+            <h4>Bramka NOT "negacja" "</h4>
+            <table>
+                <tr>
+                    <td>p</td>
+                    <td>-p</td>
+
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+
+                </tr>
+
+
+            </table>
+
+            <img src="NOT.png">
+        </div>
+        <div class="bramki">
+            <h4>Bramka NAND "Dysjunkcja" "</h4>
+            <table>
+                <tr>
+                    <td>p</td>
+                    <td>-p</td>
+                    <td>p/q</td>
+
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+
+                </tr>
+
+
+            </table>
+
+
+            <img src="NOT.png">
+        </div>
+        <div class="bramki">
+            <div id="Przerzutnik">
+                <h4>Przerzutnik typu RS</h4>
+                <p>Ma on: </p>
+                <ol>2 wejscia</ol>
+                <li>S (ang.Set)- wejscie ustawiajace
+                </li>
+                <li>R (ang.Reset)- wejscie zerujące</li>
+                <ol>2 wyjscia</ol>
+                <li>Q- wyjscie zwykłe</li>
+                <ol></ol>
+                <li><span style="border-top:1px solid black">Q</span>- wyjscie zanegowane</li>
+                <img src="RS.png">
+
+            </div>
+
+        </div>
+    </div>
+    <span ng-show="test"> NIE KLIKOĆ </span>
+</body>
+
+</html>
