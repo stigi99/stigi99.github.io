@@ -1,0 +1,57 @@
+<html>
+<head>
+<style type="text/css">
+.tabela {
+  background:#ff0000;
+  padding:3px;
+   border:solid #339933 30px;
+  margin:0 15x 15px 0;
+   float: left;
+
+  }
+p {
+color:red;
+font-style:Arial;
+font-size:200px;
+}
+</style>
+</head>
+<body>
+<marquee><p id="demo"></p></marquee>
+
+<script>
+
+var tablica=[];
+var schowek, schowek2;
+function compareNumbers(p1, p2) {
+   return p1 - p2
+}
+
+for (var i=0 ; i<10 ; i++)
+{
+	var liczby=Math.ceil(Math.random()*100); 
+	tablica.push(liczby);  
+}
+
+for(var z=0 ; z<10 ; z++)
+	{
+
+for (var a=0 ; a<9 ; a++)
+	{
+	compareNumbers(tablica[a], tablica[a+1])
+	}
+	}
+
+
+document.write(tablica+"<br>")
+document.write(liczby+"<br>")
+document.write(schowek+"<br>")
+
+ 
+</script>
+
+
+</body>
+
+</div>
+</html>

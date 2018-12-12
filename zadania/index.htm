@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> proba formularza </title>
+
+<script>
+function probka(formularz)
+	{
+	var zmienna=formularz.poletekstowe.value;
+	for (var x=1; x<11; x++) {
+	alert(""+zmienna);
+	result = str.link("https://www.w3schools.com");
+	}	
+	}
+	function otworz(adres)  {
+ noweOkno = {window.open(adres, 'okienko', 'menubar=no, toolbar=no, location=no, scrollbars=no, resizable=no, status=no, width=461, height=682')
+ noweOkno.focus()
+}
+</script>
+</head>
+<body>
+
+<form name="mojformularz" action="" method="get">
+<input type="text" name="poletekstowe" value="" />
+<input type="button" name="przycisk" value="kliknij" onmouseover="probka(this.form)" /> 
+<a onclick="otworz('index.htm?page=okno')" href="index.htm?page=okno">katakana</a>
+</body>
+</html>

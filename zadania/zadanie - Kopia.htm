@@ -1,0 +1,56 @@
+<html>
+<head>
+<style type="text/css">
+.tabela {
+  background:#ff0000;
+  padding:3px;
+   border:solid #339933 30px;
+  margin:0 15x 15px 0;
+   float: left;
+
+  }
+p {
+color:red;
+font-style:Arial;
+font-size:200px;
+}
+</style>
+</head>
+<body>
+<marquee><p id="demo"></p></marquee>
+
+<script>
+var liczba1;
+var liczba=0;
+var suma=0,podaj;
+
+for (liczba1=0; ; liczba1++) {
+podaj=prompt ("podaj liczbe:","");
+podaj=parseInt(podaj);
+suma=suma+podaj;
+document.write(suma,"<br>");
+if (podaj==33) {
+liczba1=liczba1 + 1 
+document.write("podano liczb:",liczba1)
+dalej=prompt ("czy chcesz kontynuowac?","")
+break
+
+
+}
+
+
+
+}
+
+
+
+
+
+ 
+</script>
+
+
+</body>
+
+</div>
+</html>
