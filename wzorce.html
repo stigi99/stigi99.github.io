@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <style>
+        #srodek {
+            width: 50px;
+            height: 100px;
+            
+      
+            
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="srodek">
+        <label>KOD</label>
+        <input type="text" id="kod"><br>
+        <label>PIN</label>
+        <input type="text" id="pin">
+        <input type="submit" id="sprawdz" value="wyslij">
+        <p id="test"></p>
+    </div>
+
+    <script>
+        document.getElementById("sprawdz").addEventListener("click", function () {
+            var wzor_pin = /^\d{4}$/;
+            var wzor_kod = /^\d\d-\d\d\d$/;
+            var kod = document.getElementById("kod").value;
+            console.log(kod);
+            var pin = document.getElementById("pin").value;
+            if (wzor_kod.test(kod)) {
+                alert("kod poprawny");
+            }
+            else {
+                alert("kod niepoprawny");
+            }
+            if (wzor_pin.test(pin)) {
+                alert("pin poprawny")
+            }
+            else {
+                alert("pin niepoprawny");
+            }
+        }
+        )
+    </script>
+<div id="srodek">
+<form action="">
+<label>KOD</label>
+<input type="text" id="kod" pattern="^\d\d-\d\d\d$"><br>
+<label>PIN</label>
+<input type="text" id="pin" pattern="^\d{4}$">
+<input type="submit" id="sprawdz" value="wyslij">
+</form>
+</div>
+
+
+
+</body>
+
+
+</html>
