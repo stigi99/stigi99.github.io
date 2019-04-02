@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LOGOWANIE DO FORMULARZA
+    </title>
+    <style>
+        #formularz {
+            border-radius: 98px 98px 98px 98px;
+            -moz-border-radius: 98px 98px 98px 98px;
+            -webkit-border-radius: 98px 98px 98px 98px;
+            border: 8px groove #000000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 4%;
+            width: 300px;
+            height: 100px;
+            background: #8cb2ff;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="formularz">
+        <form action="logowanie.php" method="POST" name="logowanie" autocomplete="on">
+            <label>PESEL</label>
+            <input type="text" placeholder="PESEL" pattern="[0-9]{11}" name="pesel"
+                title="WPISZ PESEL W POPRAWNYM FORMACIE IDIOTO"><br>
+            <label>KEY</label>
+            <input type="text" placeholder="KLUCZ" pattern="[A-Z0-9]{5}-[A-Z0-9]{5}-[A-Z0-9]{5}-[A-Z0-9]{5}-[A-Z0-9]{5}" name="KEY"
+                title="WPISZ KLUCZ W POPRAWNYM FORMACIE DEBILU"><br>
+            <label>EMAIL</label>
+            <input type="email" placeholder="EMAIL" name='email'><br>
+            <input type="submit" value="Pujc z walidacja">
+            <input type="submit" formnovalidate value="pujdz bez walidacji">
+        </form>
+    </div>
+</body>
+
+</html>
