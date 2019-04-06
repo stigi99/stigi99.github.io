@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="pl">
+
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>POLA FIGUR</title>
+    <style>
+        #demo{
+            
+            margin: auto;
+            padding:10px;
+            width: 300px;
+            height: 300px;
+        -webkit-box-shadow: 57px -35px 23px 19px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 57px -35px 23px 19px rgba(0, 0, 0, 0.75);
+        -box-shadow: 57px -35px 23px 19px rgba(0, 0, 0, 0.75);
+        background-color:darkgrey;
+        font-family: 'Playfair Display', serif;
+        }
+        .button {
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
+	background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
+	background-color:#768d87;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
+	background-color:#6c7c7c;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.input { padding:3px; font-size:10px; border-radius:20px; border-width:3px; border-style:dashed; border-color:#006e1d; box-shadow: 1px 0px 5px 0px rgba(42,42,42,.75);  } 
+		 .input:focus { outline:none; } 
+    </style>
+
+
+</head>
+
+<body>
+    <div id="demo">
+        <h4> Obliczanie pola kwadratu !!! </h4>
+        <form action="obliczanie_pola.php" method="POST">
+            <label>
+                <p>Wprowadz bok kwadratu</p>
+                <!--  <input type="number" name="bok" min="0"> -->
+                <input type="text" name="bok2" min="0"placeholder="Bok" class="input">
+                <input type="submit" name="potwierdz" class="button" >
+            </label>
+        </form>
+        <form action="obliczanie_pola.php" method="GET">
+            <h4> Obliczanie pola koła!!! </h4>
+            <label>
+                <p>Wprowadz promien </p>
+
+                <input type="text" name="promien" min="0" placeholder="PROMIEN" required class="input">
+                <input type="submit" name="potwierdz" class="button">
+            </label>
+        </form>
+
+
+    </div>
+</body>
+
+</html>
