@@ -1,6 +1,6 @@
 <?php
 //POLE KWADRATU
-if (!isset($_POST["potwierdz"]) || !isset($_GET["potwierdz"]))
+if (!isset($_SERVER['HTTP_REFERER']))
     header("Location: pole_kwadratu.html");
 
 if (isset($_POST["bok2"])){
@@ -18,7 +18,7 @@ else {
  //$pole=$bok*$bok;
 //$pole=$bok*$bok;
 $pole2=$bok2*$bok2;
-echo ("POLE WYNOSI $pole2");
+echo ("POLE WYNOSI $pole2 cm<sup>2</sup>");
 }
 }
 
@@ -35,7 +35,7 @@ if ($promien<0 || !is_numeric($promien) ){
 }
 else {
 $pole3=M_PI * $promien * $promien;
-echo ("POLE WYNOSI $pole3");
+echo ("POLE WYNOSI $pole3 cm<sup>2</sup>");
 }
 }
 
