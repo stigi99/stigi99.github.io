@@ -31,7 +31,7 @@ function draw() {
    
     
     
-    if (frameCount % 40 == 0) {
+    if (frameCount % 60 == 0) {
         pipes.push(new Pipe());
     }
 
@@ -69,7 +69,7 @@ function Bird() {
     this.show = function () {
             image(moon, this.x, this.y);
     }
-    this.up = function () {
+    this.up = function () {                                   
         this.velocity += this.lift;
 
 
@@ -88,19 +88,26 @@ function Bird() {
             this.y = 0;
             this.velocity = 0;
         }
+        
     }
 }
 function Pipe() {    
     points();
    
     this.top = random(height / 2);
+    console.log(this.top);
     this.bottom = random(height / 2);
-    if (this.top+20 > this.bottom && this.bottom+20> this.top){
-        this.bottom -=10;
-        this.top -=10;
+    console.log(this.bottom);
+     if (this.top+50 > this.bottom || this.bottom+50> this.top){
+        this.bottom -=  20;
+        this.top -=20;
+    }
+    if (this.top-30 > this.bottom || this.bottom-30> this.top){
+        this.bottom +=10;
+        this.top +=10;
     }
     this.x = width;
-    this.w = 30;
+    this.w = 50; // szerokosc
     this.speed = 3;
     this.highlight = false;
     this.hits = function (bird) {
@@ -119,7 +126,7 @@ function Pipe() {
     this.show = function () {
         fill(255);
         if (this.highlight) {
-            fill(255, 0, 0)
+            
             score = 0;
         }
         image(usa, this.x, 0, this.w, this.top);

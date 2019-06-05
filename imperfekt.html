@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* #tabela {
+    border: 3px solid black;
+
+  } */
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="all"
+    href="https://s3.amazonaws.com/dynatable-docs-assets/css/bootstrap-2.3.2.min.css" />
+  <link rel="stylesheet" media="all"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#zdania").hide();
+      $("#zasady").hide();
+      $("#zdania1").click(function () {
+        $("#zdania").fadeToggle();
+
+      })
+      $("#zasady1").click(function () {
+        $("#zasady").fadeToggle();
+      })
+      $("#tabela").dynatable();
+
+    });
+
+  </script>
+</head>
+
+<body style=" background-color: darkgrey; font-family: 'Lato', sans-serif; text-align: center;">
+  <h4 id="zdania1">Kliknij żeby zobaczyć przykladowe zdania</h4>
+  <h4 id="zasady1"> Kliknij żeby zobaczyć zasady tworzenia</h4>
+  <p id="zasady">
+    <b>Czasowniki regularne <br>
+  
+    Do tematu bezokolicznika dodajemy końcówkę „-te“. Powstała forma to forma 1. i 3. osoby liczby pojedynczej. <br>
+
+    machen (robić) -> ich mach + te = ich machte<br>
+    sagen (mówić) -> er sag + te = er sagte<br>
+
+    Do pozostałych form dodajemy końcówki osobowe.<br>
+   </b>
+
+    fragen (pytać)<br>
+
+    ich fragte<br>
+    du fragtest<br>
+    er/sie/es fragte<br>
+
+    wir fragten<br>
+    ihr fragtet<br>
+    sie/Sie fragten<br>
+
+    aufräumen (sprzątać)<br>
+    Ich räumte mein Zimmer auf. (Sprzątałam/posprzątałam pokój.)<br>
+
+    bestellen (zamawiać)<br>
+    Er bestellte dieses Buch. (On zamówił tę książkę.)<br>
+
+    danken (dziękować)<br>
+    Wir dankten für dieses Gespräch. (Podziękowaliśmy/ dziękowaliśmy za tę rozmowę.)<br>
+
+    einkaufen (kupować)<br>
+    Wer kaufte bei euch ein? (Kto u was zrobił zakupy?)<br>
+
+    hören (słuchać)<br>
+    Ich hörte die Musik. (Słyszałam muzykę./ Słuchałam muzyki.)<br>
+
+    gratulieren (gratulować)<br>
+    Wir gratulierten ihr zum Geburtstag. ( Składaliśmy jej z okazji urodzin.)<br>
+
+    leben (żyć)<br>
+    Sie lebte in Berlin. (Ona mieszkała w Berlinie.)<br>
+
+    lernen (uczyć się)<br>
+    Karin lernte Tennis spielen. (Karina uczyła się grać w tenisa.)<br>
+
+    machen (robić)<br>
+    Wir machten einen Ausflug. (Zrobiliśmy wycieczkę.)<br>
+
+    suchen (szukać)<br>
+    Ich suchte meinen Kuli.(Szukałam mojego długopisu.)<br>
+
+    wohnen (mieszkać)<br>
+    Wo wohntet ihr? (Gdzie mieszkaliście?)<br>
+
+
+   <b> Czasowniki z tematem kończącym się na –d, -t lub grupę samogłoskową kończącą się głoską –m, -n otrzymują przed<br>
+    przyrostkiem samogłoskę –e.</b> <br>
+
+    arbeiten (pracować)<br>
+
+    ich arbeitete<br>
+    du arbeitetest<br>
+    er/sie/es arbeitete<br>
+
+    wir arbeiteten<br>
+    ihr arbeitetet<br>
+    sie/Sie arbeiteten<br>
+
+    enden (kończyć, konczyć się)<br>
+    Der Unterricht endete um 15 Uhr. (Lekcja skończyła się o 15.)<br>
+
+    kosten (kosztować)<br>
+    Das kostete 20 Euro. (To kosztowało 20 Euro.)<br>
+
+    rechnen (liczyć)<br>
+    Sie rechnete alles im Kopf. (Ona liczyła wszystko w głowie/w pamięci.)<br>
+
+    warten (czekać)<br>
+    Wartetet ihr gestern lange auf ihn? (Czekaliście wczoraj długo na niego?)<br>
+
+  </p>
+  <p id="zdania">
+    Ich war gestern vier Stunden in der Arbeit. (Byłam/byłem wczoraj w pracy 4 godziny.) <br>
+
+    Du hattest keine Zeit für mich. (Ty nie miałeś/miałaś czasu dla mnie.) <br>
+
+    Er fragte nach dem Weg. (On zapytał o drogę.) <br>
+
+    Der Unterricht begann um 9 Uhr. (Lekcja rozpoczęła się o 9.) <br>
+
+    Wir luden viele Gäste zum Geburtstag ein. (Zaprosiliśmy wielu gości na urodziny.) <br>
+
+    Ihr spracht mit ihm eine Stunde. (Rozmawialiście z nim godzinę.) <br>
+
+    Ich schlief gestern sehr gut. (Spałam wczoraj bardzo dobrze.) <br>
+
+    Sie gingen ins Kino mit Anna. (Oni poszli do kina z Anną.) <br>
+
+
+  </p>
+  <p class="schowaj"></p>
+  <table id="tabela" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Czasownik zwykły</th>
+        <th>Czasownik Impefekt</th>
+        <th>Tłumaczenie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> backen </td>
+        <td> backte/buk</td>
+        <td> piec</td>
+      </tr>
+      <tr>
+        <td>befehlen</td>
+        <td>befahl</td>
+        <td>rozkazywac</td>
+      </tr>
+      <tr>
+        <td>beginnen</td>
+        <td>begann</td>
+        <td>zacząć,zacząć się</td>
+      </tr>
+      <tr>
+        <td>bieten</td>
+        <td>bot</td>
+        <td>oferować</td>
+      </tr>
+      <tr>
+        <td>bitten</td>
+        <td>bat</td>
+        <td>prosić</td>
+      </tr>
+      <tr>
+        <td>bleiben</td>
+        <td>bleib</td>
+        <td>pozostać</td>
+      </tr>
+      <tr>
+        <td>bringen</td>
+        <td>brachte</td>
+        <td>przynosić</td>
+      </tr>
+      <tr>
+        <td>denken</td>
+        <td>dachte</td>
+        <td>myśleć</td>
+      </tr>
+      <tr>
+        <td>durfen</td>
+        <td>durfte</td>
+        <td>mieć pozwolenie</td>
+      </tr>
+      <tr>
+        <td>empfehlen</td>
+        <td>empfahl</td>
+        <td>polecać</td>
+      </tr>
+      <tr>
+        <td>essen</td>
+        <td>aß</td>
+        <td>jeść</td>
+      </tr>
+      <tr>
+        <td>fahren</td>
+        <td>fuhr</td>
+        <td>jechać</td>
+      </tr>
+      <tr>
+        <td>fangen</td>
+        <td>fing</td>
+        <td>łapać</td>
+      </tr>
+      <tr>
+        <td>finden</td>
+        <td>fand</td>
+        <td>znaleźć</td>
+      </tr>
+      <tr>
+        <td>fliegen</td>
+        <td>flog</td>
+        <td>latać</td>
+      </tr>
+      <tr>
+        <td>fließen</td>
+        <td>floss</td>
+        <td>płynąć</td>
+      </tr>
+      <tr>
+        <td>frieren</td>
+        <td>fror</td>
+        <td>marznąć</td>
+      </tr>
+      <tr>
+        <td>geben</td>
+        <td>gab</td>
+        <td>dawać</td>
+      </tr>
+      <tr>
+        <td>gefallen</td>
+        <td>gefiel</td>
+        <td>podobać się</td>
+      </tr>
+      <tr>
+        <td>gehen</td>
+        <td>ging</td>
+        <td>chodzić</td>
+      </tr>
+      <tr>
+        <td>gelingen</td>
+        <td>gelang</td>
+        <td>udać się, powieść</td>
+      </tr>
+      <tr>
+        <td>genießen</td>
+        <td>genoss</td>
+        <td>rozkoszować się</td>
+      </tr>
+      <tr>
+        <td>geschehen</td>
+        <td>geschah</td>
+        <td>wydarzać się</td>
+      </tr>
+      <tr>
+        <td>gewinnen</td>
+        <td>gewonn</td>
+        <td>wygrywać</td>
+      </tr>
+      <tr>
+        <td>greifen</td>
+        <td>griff</td>
+        <td>sięgać</td>
+      </tr>
+      <tr>
+        <td>haben</td>
+        <td>hatte</td>
+        <td>mieć</td>
+      </tr>
+      <tr>
+        <td>halten</td>
+        <td>hielt</td>
+        <td>trzymać</td>
+      </tr>
+      <tr>
+        <td>heben</td>
+        <td>hob</td>
+        <td>podnosić</td>
+      </tr>
+      <tr>
+        <td>heißen</td>
+        <td>hieß</td>
+        <td>nazywać się</td>
+      </tr>
+      <tr>
+        <td>helfen</td>
+        <td>half</td>
+        <td>pomagać</td>
+      </tr>
+      <tr>
+        <td>kennen</td>
+        <td>kannte</td>
+        <td>znać</td>
+      </tr>
+      <tr>
+        <td>kommen</td>
+        <td>kam</td>
+        <td>przychodzić</td>
+      </tr>
+      <tr>
+        <td>konnen</td>
+        <td>konnte</td>
+        <td>móc, umieć</td>
+      </tr>
+      <tr>
+        <td>laden</td>
+        <td>lud</td>
+        <td>ładować</td>
+      </tr>
+      <tr>
+        <td>lassen</td>
+        <td>ließ</td>
+        <td>pozwalać, kazać</td>
+      </tr>
+      <tr>
+        <td>laufen</td>
+        <td>lief</td>
+        <td>biec</td>
+      </tr>
+      <tr>
+        <td>leiden</td>
+        <td>litt</td>
+        <td>cierpieć</td>
+      </tr>
+      <tr>
+        <td>leihen</td>
+        <td>lieh</td>
+        <td>pożyczać</td>
+      </tr>
+      <tr>
+        <td>liegen</td>
+        <td>lag</td>
+        <td>leżeć</td>
+      </tr>
+      <tr>
+        <td>lugen</td>
+        <td>log</td>
+        <td>kłamać</td>
+      </tr>
+      <tr>
+        <td>messen</td>
+        <td>maß</td>
+        <td>mierzyć</td>
+      </tr>
+      <tr>
+        <td>mogen</td>
+        <td>mochte</td>
+        <td>lubić</td>
+      </tr>
+      <tr>
+        <td>mussen</td>
+        <td>musste</td>
+        <td>musieć</td>
+      </tr>
+      <tr>
+        <td>nehmen</td>
+        <td>nahm</td>
+        <td>brać</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <h3 style="text-align: center">Część druga tabelki II</h3>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>nennen</td>
+        <td>nannte</td>
+        <td>nazywać</td>
+      </tr>
+      <tr>
+        <td>raten</td>
+        <td>riet</td>
+        <td>radzić</td>
+      </tr>
+      <tr>
+        <td>reiben</td>
+        <td>rieb</td>
+        <td>trzeć</td>
+      </tr>
+      <tr>
+        <td>reißen</td>
+        <td>riss</td>
+        <td>drzeć, rwać</td>
+      </tr>
+      <tr>
+        <td>reiten</td>
+        <td>ritt</td>
+        <td>jeździć konno</td>
+      </tr>
+      <tr>
+        <td>rennen</td>
+        <td>rannte</td>
+        <td>pędzić, biec</td>
+      </tr>
+      <tr>
+        <td>rufen</td>
+        <td>rief</td>
+        <td>wołać</td>
+      </tr>
+      <tr>
+        <td>schaffen</td>
+        <td>schluf</td>
+        <td>tworzyć</td>
+      </tr>
+      <tr>
+        <td>schlafen</td>
+        <td>schlief</td>
+        <td>spać</td>
+      </tr>
+      <tr>
+        <td>schließen</td>
+        <td>schloss</td>
+        <td>zamykać</td>
+      </tr>
+      <tr>
+        <td>schneiden</td>
+        <td>schnitt</td>
+        <td>ciąć, kroić</td>
+      </tr>
+      <tr>
+        <td>schreiben</td>
+        <td>schrieb</td>
+        <td>pisać</td>
+      </tr>
+      <tr>
+        <td>schreien</td>
+        <td>schrie</td>
+        <td>krzyczeć</td>
+      </tr>
+      <tr>
+        <td>schweigen</td>
+        <td>schwieg</td>
+        <td>milczeć</td>
+      </tr>
+      <tr>
+        <td>schwimmen</td>
+        <td>schwamm</td>
+        <td>pływać</td>
+      </tr>
+      <tr>
+        <td>sehen</td>
+        <td>sah</td>
+        <td>widzeć</td>
+      </tr>
+      <tr>
+        <td>sein</td>
+        <td>war</td>
+        <td>być</td>
+      </tr>
+      <tr>
+        <td>singen</td>
+        <td>sang</td>
+        <td>śpiewać</td>
+      </tr>
+      <tr>
+        <td>sinken</td>
+        <td>sank</td>
+        <td>opadać, obniżać</td>
+      </tr>
+      <tr>
+        <td>sitzen</td>
+        <td>saß</td>
+        <td>siedzieć</td>
+      </tr>
+      <tr>
+        <td>sollen</td>
+        <td>sollte</td>
+        <td>mieć powinność</td>
+      </tr>
+      <tr>
+        <td>sprechen</td>
+        <td>sprach</td>
+        <td>mówić</td>
+      </tr>
+      <tr>
+        <td>springen</td>
+        <td>sprang</td>
+        <td>skakać</td>
+      </tr>
+      <tr>
+        <td>stehen</td>
+        <td>stand</td>
+        <td>stać</td>
+      </tr>
+      <tr>
+        <td>steigen</td>
+        <td>stieg</td>
+        <td>wzrastać</td>
+      </tr>
+      <tr>
+        <td>sterben</td>
+        <td>starb</td>
+        <td>umierać</td>
+      </tr>
+      <tr>
+        <td>stoßen</td>
+        <td>stieß</td>
+        <td>popychać</td>
+      </tr>
+      <tr>
+        <td>streiten</td>
+        <td>stritt</td>
+        <td>kłócić się</td>
+      </tr>
+      <tr>
+        <td>tragen</td>
+        <td>trug</td>
+        <td>nosić</td>
+      </tr>
+      <tr>
+        <td>treffen</td>
+        <td>traf</td>
+        <td>spotykać</td>
+      </tr>
+      <tr>
+        <td>trinken</td>
+        <td>trank</td>
+        <td>pić</td>
+      </tr>
+      <tr>
+        <td>tun</td>
+        <td>tat</td>
+        <td>czynić</td>
+      </tr>
+      <tr>
+        <td>vergessen</td>
+        <td>vergaß</td>
+        <td>zapominać</td>
+      </tr>
+      <tr>
+        <td>verlieren</td>
+        <td>verlor</td>
+        <td>gubić</td>
+      </tr>
+      <tr>
+        <td>wachsen</td>
+        <td>wuchs</td>
+        <td>rosnąć</td>
+      </tr>
+      <tr>
+        <td>waschen</td>
+        <td>wusch</td>
+        <td>myć</td>
+      </tr>
+      <tr>
+        <td>werden</td>
+        <td>wurde</td>
+        <td>stać się, zostać</td>
+      </tr>
+      <tr>
+        <td>werfen</td>
+        <td>warf</td>
+        <td>rzucać</td>
+      </tr>
+      <tr>
+        <td>wiegen</td>
+        <td>wog</td>
+        <td>ważyć</td>
+      </tr>
+      <tr>
+        <td>wissen</td>
+        <td>wusste</td>
+        <td>wiedzieć</td>
+      </tr>
+      <tr>
+        <td>wollen</td>
+        <td>wollte</td>
+        <td>chcieć</td>
+      </tr>
+      <tr>
+        <td>ziehen</td>
+        <td>zog</td>
+        <td>ciągnąć</td>
+      </tr>
+      <tr>
+        <td>zwingen</td>
+        <td>zwang</td>
+        <td>zmuszać</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</body>
+
+</html>
