@@ -103,7 +103,7 @@ function hide2Cards(nr1, nr2)
 	
 	if(pairsLeft == 0)
 	{
-		$('.board').html('<h1>You win!<br>Done in '+turnCounter+' turns</h1>');
+		$('.board').html('<h1>Wygrałeś jesteś mistrzem zsti<br>Zajeło Ci to '+turnCounter+' tur</h1>');
 	}
 	
 	lock = false;
