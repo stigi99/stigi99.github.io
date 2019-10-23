@@ -3,35 +3,42 @@
 <head>
     <title>Niemiecki Język</title>
     <style>
-    body {
-        width:100%;
-        height: 100%;
-margin:auto;
-    }
-    table,p {
-        margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-border-collapse: collapse;
-    }
-    td{
-        
-        text-align: center;
-border: 2px solid indigo;
+        body {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        table,
+        p {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+
+        td {
+
+            text-align: center;
+            border: 2px solid indigo;
 
 
-    }
-	canvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 800px;
-}
-    
-    
+        }
+
+        canvas {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 800px;
+        }
+        .de {
+            display: none;
+            float:right;
+            text-align: center;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 </head>
@@ -202,72 +209,122 @@ border: 2px solid indigo;
         </tr>
 
 
-       
-        
+
+
     </table>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+       </script>
+       <script>
+      $( document ).ready(function() {
+        $('.klik').click(function() {
+    $(".de").toggle();
+});
+});
+</script>
+      
+        
+        
+   <center> <input type="checkbox" class="klik"/></center>   
+    <div id="zdania">
+        <span class="pl">1.	O której zaczynam prace?</span><br>
+        <span class="de">1.	Um wie viel Uhr beginnt die Arbeit?</span><br>
+        <span class="pl">2.	Ile zarobię za godzinne?</span><br>
+        <span class="de">2.	Wie viel verdiene ich pro Stunde?</span><br>
+        <span class="pl">3.	Praca zaczyna się o 7 a kończy o 15</span><br>
+        <span class="de">3.	Die Arbeit beginnt um 7 Uhr</span><br>
+        <span class="pl">4.	Co należy do moich obowiązków</span><br>
+        <span class="de">4.	Was gehört zu meinem fluchten? Was muss ich machen? </span><br>
+        <span class="pl">5.	Wynagrodzenie w firmie jest do uzgodnienia.</span><br>
+        <span class="de">5.	Die Bezahlung ich nach Vereinbarung</span><br>
+        <span class="pl">6.	Jestem odpowiedzialny, pracowity</span><br>
+        <span class="de">6.	Ich bin verantwortlich und sorgfältig</span><br>
+        <span class="pl">7.	Miejsce pracy, godziny pracy i wynagrodzenie odgrywają dla mnie dużą role</span><br>
+        <span class="de">7.	Arbeitsplatz, Arbeitszeit und Bezahlung spielen für mich eine große Rolle</span><br>
+        <span class="pl">8.	O której jest przerwa</span><br>
+        <span class="de">8.	Wann ist die Pause? </span><br>
+        <span class="pl">9.	Potrzebuje jednego dnia wolnego żeby załatwić papiery i dokumenty</span><br>
+        <span class="de">9.	Ich brauche einen Tag frei, Ich mochte Formalitäten erledigen</span><br>
+        <span class="pl">10.Gdzie jest sklep? </span><br>
+        <span class="de">10.Wo ist Supermarkt?</span><br>
+        <span class="pl">11.Czy będę miał nadgodziny?</span><br>
+        <span class="de">11.Habe ich überstanden?</span><br>
+        <span class="pl">12.Zraniłem się, gdzie jest szpital?</span><br>
+        <span class="de">12.Wo ist das Krankenhaus? </span><br>
+        <span class="pl">13.Czy gwarantujecie zakwaterowanie i wyżywienie? </span><br>
+        <span class="de">13.Sichert die Firma Unterkunft?</span><br>
+        <span class="pl">14.Jak wygląda sprawa dojazdu do firmy? </span><br>
+        <span class="de">14.Wie ist mit zufahrt zur Firma?</span><br>
+        <span class="pl">15.Czy firma gwarantuje ubezpieczenie? </span><br>
+        <span class="de">15.Sichert die Firma Versicherung? </span><br>
+
+
+
+
+    </div>
     <p>TORUS</p>
-    <script> 
-    var angle= 0;
-	var x= -300;
-	var x1= 400;
-	var y= 1.8;
-    
-    function setup() {
-        createCanvas(1200,300, WEBGL);
-        papaj = loadImage("papaj.png");
-			donut = loadImage("donut.png");
+    <script>
+        var angle = 0;
+        var x = -300;
+        var x1 = 400;
+        var y = 1.8;
 
-    }
-    
-    function draw() {
-	
-background(0);
-push();
-rectMode(CENTER);
-noStroke();
-rotateX(angle);
-rotateY(angle * 0.2);
-translate(mouseX - width/2, mouseY - height/2);
-normalMaterial();
-torus (100, 10);
-texture(papaj);
-rect(0,0 , 100,100);
-angle += 0.07
-pop();
+        function setup() {
+            createCanvas(1200, 300, WEBGL);
+            papaj = loadImage("papaj.png");
+            donut = loadImage("donut.png");
 
-push();
-  translate(x, 50);
-  rotateZ(frameCount * 0.01);
-  rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.01);
-  ambientMaterial(250);
-   noStroke();
-  torus(80, 20, 64, 64);
-  x= x+y;
-  if (x > x1) {
-  y= -1.8;
-}
-if (x < -401){
-y=1.8;
-}
-pop ();	
-	
-	push();
-	translate(x, x/2);
-  noStroke();
-  normalMaterial();
-  texture(donut);
-  for (var i = 0; i < 10; i ++) {
-    ellipse(0, 30, 20, 80);
-    rotate(PI/5);
-  }
-pop ();	
-	
-}
+        }
 
-    
-    
-    
+        function draw() {
+
+            background(0);
+            push();
+            rectMode(CENTER);
+            noStroke();
+            rotateX(angle);
+            rotateY(angle * 0.2);
+            translate(mouseX - width / 2, mouseY - height / 2);
+            normalMaterial();
+            torus(100, 10);
+            texture(papaj);
+            rect(0, 0, 100, 100);
+            angle += 0.07
+            pop();
+
+            push();
+            translate(x, 50);
+            rotateZ(frameCount * 0.01);
+            rotateX(frameCount * 0.01);
+            rotateY(frameCount * 0.01);
+            ambientMaterial(250);
+            noStroke();
+            torus(80, 20, 64, 64);
+            x = x + y;
+            if (x > x1) {
+                y = -1.8;
+            }
+            if (x < -401) {
+                y = 1.8;
+            }
+            pop();
+
+            push();
+            translate(x, x / 2);
+            noStroke();
+            normalMaterial();
+            texture(donut);
+            for (var i = 0; i < 10; i++) {
+                ellipse(0, 30, 20, 80);
+                rotate(PI / 5);
+            }
+            pop();
+
+        }
+
+
+
+
     </script>
 </body>
 
