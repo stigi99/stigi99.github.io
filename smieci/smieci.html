@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    canvas {
+      border: 1px solid #d3d3d3;
+      background-color: #f1f1f1;
+
+
+    }
+
+    body {
+
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      display: inline-block;
+    }
+
+    #stopka {
+      color: red;
+      background-color: pink;
+      font-size: 27px;
+      font-family: "Times New Roman";
+      position: relative;
+      overflow: hidden;
+      right: 0;
+      top: 0;
+      text-align: center;
+      width: 24%;
+      height: 20%;
+      float: right;
+
+
+    }
+
+    #yt {
+      position: absolute;
+      top: 0;
+
+
+    }
+
+    #impresja {
+      background-image: url('impresja.jpg');
+      height: 374px;
+      width: 510px;
+    }
+
+    #impresja:hover {
+      background-image: url('impresjaa.jpg');
+      height: 570px;
+      width: 760px;
+    }
+
+    #niemiecki {
+      font-size: 20px;
+
+
+    }
+  </style>
+
+
+</head>
+
+<body onload="startGame()">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="gra.js">
+  </script>
+  <div id="stopka">
+    <p> お前はもう死んでいる </p>
+    <p>nani omae wa mou shindeiru</p>
+    <p>You Are Already Dead</p>
+  </div>
+
+
+  <br>
+  <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+  <!--<img src="signum.PNG" alt="signum" style="float: right; position: absolute; right: 0%;"  /> -->
+  <abbr title="to daje podpowiedz">Podpowiedz</abbr><br>
+  <div id="impresja"></div>
+  <em> podkreslony tekst </em>
+  <a href="matma.html"> matma </a>
+  <adress>
+    Country: Poland <br>
+    name: Mateusz <br>
+    Surname: Misiak <br>
+  </adress>
+  <bdo id="odwrut" dir="rtl"></bdo><br>
+
+  <audio controls>
+    <source src="satie.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio> <br>
+  <cite> Gymnopedie </cite>
+  <a href="d3.html">d3</a>
+  <a href="signum.docx">signum</a>
+  <a href="xampp.pptx">XAMPP PREZENTACJA </a>
+
+  <p id="niemiecki">
+    Ich möchte Informatiker von Beruf sein. Ich interessiere mich für Informatik zu Kinder. Ich mag Computer. Ich surfe
+    gern Im in Internet. Ich mag Mathematik und ich habe gute Noten. Informatiker repariert Computer, Laptop und
+    elektrische Gerate. Manchmal er schreibt neue Programme auf Computer. Ich habe viele neue Ideen. Diese Beruf wird
+    für mich Spaß sein und in Bank kann ich viel Geld erwerben. Ich hoffe, dass ich einen Tages ein Informatiker werde.
+    Diese Beruf hat ein flexibler Stunden. Ein qualifizier Mitarbeiter ist erforderlich. Ich fürchte, es wird harte
+    Arbeit<br><br>
+    Chciałbym zostać informatykiem. Interesuje się informatyką od dziecka. Lubię komputer. Chętnie surfuje po
+    Internecie. Lubię matematykę i mam dobre oceny. Informatyk naprawia komputery, laptopy i sprzęty elektroniczne.
+    Ponadto on pisze nowe programy na komputer. Mam wiele nowych pomysłów. Ten zawód będzie dla mnie przyjemny i mogę
+    zarobić dużo pieniędzy. Mam nadzieje że pewnego dnia zostanę informatykiem. Ta praca ma elastyczne godziny.
+    Potrzebny jest wykwalifikowany pracownik. Obawiam się że może to być ciężka praca.
+
+
+  </p>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,128 +1,230 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pl">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    canvas {
-      border: 1px solid #d3d3d3;
-      background-color: #f1f1f1;
 
-
-    }
-
-    body {
-
-      margin: auto;
-      width: 100%;
-      height: 100%;
-      position: relative;
-
-      display: inline-block;
-    }
-
-    #stopka {
-      color: red;
-      background-color: pink;
-      font-size: 27px;
-      font-family: "Times New Roman";
-      position: relative;
-      overflow: hidden;
-      right: 0;
-      top: 0;
-      text-align: center;
-      width: 24%;
-      height: 20%;
-      float: right;
-
-
-    }
-
-    #yt {
-      position: absolute;
-      top: 0;
-
-
-    }
-
-    #impresja {
-      background-image: url('impresja.jpg');
-      height: 374px;
-      width: 510px;
-    }
-
-    #impresja:hover {
-      background-image: url('impresjaa.jpg');
-      height: 570px;
-      width: 760px;
-    }
-
-    #niemiecki {
-      font-size: 20px;
-
-
-    }
-  </style>
-
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Portfolio</title>
+	<meta name="description" content="Portfolio stigi99">
+	<meta name="keywords" content="js,css,html,php, i inne">
+	<meta name="author" content="Mateusz Misiak">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
 </head>
 
-<body onload="startGame()">
+<body>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="gra.js">
-  </script>
-  <div id="stopka">
-    <p> お前はもう死んでいる </p>
-    <p>nani omae wa mou shindeiru</p>
-    <p>You Are Already Dead</p>
-  </div>
+	<header>
+	
+		<nav class="navbar navbar-dark bg-jumpers navbar-expand-lg">
+		
+			<a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-1 align-bottom" alt=""> Skoki.pl</a>
+		
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="mainmenu">
+			
+				<ul class="navbar-nav mr-auto">
+				
+					<li class="nav-item active">
+						<a class="nav-link" href="#"> Start </a>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Gry TODO </a>
+						
+						<div class="dropdown-menu" aria-labelledby="submenu">
+						
+							<a class="dropdown-item" href="flappy/gra.html"> Flappy Bird </a>
+							<a class="dropdown-item" href="memory/gra.html"> Memory </a>
+							
+							<div class="dropdown-divider"></div>
+							
+							<a class="dropdown-item" href="#"> Pygame </a>
+							<a class="dropdown-item" href="#"> TODO </a>
+						
+						</div>
+						
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> Arkusze e14 </a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> TODO </a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> TODO </a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> Kontakt </a>
+					</li>
+				
+				</ul>
+			
+				<form class="form-inline">
+				
+					<input class="form-control mr-1" type="search" placeholder="Wyszukaj" aria-label="Wyszukaj">
+					<button class="btn btn-light" type="submit">Znajdź</button>
+				
+				</form>
+			
+			</div>
+		
+		</nav>
+	
+	</header>
+	
+	<main>
+		
+		<section class="jumpers">
+		
+			<div class="container">
+				
+				<header>
+					
+					<h1>Moje projekty</h1>
+					<p>Tutaj kiedys bedzie opis ale narazie nie mam nic w glowie</p>
+						
+				</header>
+				
+				<div class="row">
+					
+					<div class="col-sm-6 col-md-5 offset-md-1">
+					
+						<figure>
+							<a href="smieci/palindrom.html"><img src="img/palindrom.jpg" alt="palindrom"></a>
+							<figcaption>Palindrom</figcaption>
+						</figure>
+					
+					</div>
+					
+					<div class="col-sm-6 col-md-5">
+					
+						<figure>
+							<a href="niemiecki/imperfekt.html"><img src="img/KFC.jpg" alt="Kamil Stoch"></a>
+							<figcaption>Język Niemiecki</figcaption>
+						</figure>
+					
+					</div>
 
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/ahonen.jpg" alt="Janne Ahonen"></a>
+							<figcaption>Janne Ahonen</figcaption>
+						</figure>
+					
+					</div>
 
-  <br>
-  <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-  <!--<img src="signum.PNG" alt="signum" style="float: right; position: absolute; right: 0%;"  /> -->
-  <abbr title="to daje podpowiedz">Podpowiedz</abbr><br>
-  <div id="impresja"></div>
-  <em> podkreslony tekst </em>
-  <a href="matma.html"> matma </a>
-  <adress>
-    Country: Poland <br>
-    name: Mateusz <br>
-    Surname: Misiak <br>
-  </adress>
-  <bdo id="odwrut" dir="rtl"></bdo><br>
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/schmitt.jpg" alt="Martin Schmitt"></a>
+							<figcaption>Martin Schmitt</figcaption>
+						</figure>
+					
+					</div>
 
-  <audio controls>
-    <source src="satie.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio> <br>
-  <cite> Gymnopedie </cite>
-  <a href="d3.html">d3</a>
-  <a href="signum.docx">signum</a>
-  <a href="xampp.pptx">XAMPP PREZENTACJA </a>
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/kubacki.jpg" alt="Dawid Kubacki"></a>
+							<figcaption>Dawid Kubacki</figcaption>
+						</figure>
+					
+					</div>
 
-  <p id="niemiecki">
-    Ich möchte Informatiker von Beruf sein. Ich interessiere mich für Informatik zu Kinder. Ich mag Computer. Ich surfe
-    gern Im in Internet. Ich mag Mathematik und ich habe gute Noten. Informatiker repariert Computer, Laptop und
-    elektrische Gerate. Manchmal er schreibt neue Programme auf Computer. Ich habe viele neue Ideen. Diese Beruf wird
-    für mich Spaß sein und in Bank kann ich viel Geld erwerben. Ich hoffe, dass ich einen Tages ein Informatiker werde.
-    Diese Beruf hat ein flexibler Stunden. Ein qualifizier Mitarbeiter ist erforderlich. Ich fürchte, es wird harte
-    Arbeit<br><br>
-    Chciałbym zostać informatykiem. Interesuje się informatyką od dziecka. Lubię komputer. Chętnie surfuje po
-    Internecie. Lubię matematykę i mam dobre oceny. Informatyk naprawia komputery, laptopy i sprzęty elektroniczne.
-    Ponadto on pisze nowe programy na komputer. Mam wiele nowych pomysłów. Ten zawód będzie dla mnie przyjemny i mogę
-    zarobić dużo pieniędzy. Mam nadzieje że pewnego dnia zostanę informatykiem. Ta praca ma elastyczne godziny.
-    Potrzebny jest wykwalifikowany pracownik. Obawiam się że może to być ciężka praca.
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/zyla.jpg" alt="Piotr Żyła"></a>
+							<figcaption>Piotr Żyła</figcaption>
+						</figure>
+					
+					</div>
 
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/kranjec.jpg" alt="Robert Kranjec"></a>
+							<figcaption>Robert Kranjec</figcaption>
+						</figure>
+					
+					</div>
 
-  </p>
-
-
-
-
-
+					<div class="col-sm-6 col-md-4">
+					
+						<figure>
+							<a href="#"><img src="img/schlierenzauer.jpg" alt="Gregor Schlierenzauer"></a>
+							<figcaption>Gregor Schlierenzauer</figcaption>
+						</figure>
+					
+					</div>
+					
+					<div class="col-sm-6 col-md-3">
+					
+						<figure>
+							<a href="#"><img src="img/kot.jpg" alt="Maciej Kot"></a>
+							<figcaption>Maciej Kot</figcaption>
+						</figure>
+					
+					</div>
+					
+					<div class="col-sm-6 col-md-3">
+					
+						<figure>
+							<a href="#"><img src="img/kraft.jpg" alt="Stefan Kraft"></a>
+							<figcaption>Stefan Kraft</figcaption>
+						</figure>
+					
+					</div>					
+					
+					<div class="col-sm-6 col-md-3">
+					
+						<figure>
+							<a href="#"><img src="img/ammann.jpg" alt="Simon Ammann"></a>
+							<figcaption>Simon Ammann</figcaption>
+						</figure>
+					
+					</div>						
+					
+					<div class="col-sm-6 col-md-3">
+					
+						<figure>
+							<a href="#"><img src="img/kasai.jpg" alt="Noriaki Kasai"></a>
+							<figcaption>Noriaki Kasai</figcaption>
+						</figure>
+					
+					</div>	
+				
+				</div>
+				
+			</div>	
+				
+		</section>
+		
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	
 </body>
-
 </html>
