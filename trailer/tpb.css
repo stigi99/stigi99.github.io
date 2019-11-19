@@ -1,0 +1,153 @@
+
+html{
+  background-color:black;
+  text-align: center;
+}
+
+.content{
+  background-image:url("tpb.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size:cover;
+  margin:0 auto;
+  margin-top:5%;
+  min-height:800px
+}
+
+#heading{
+  padding-bottom:25px;
+}
+
+#heading h1,h3{
+  -webkit-text-stroke: 2px white;  
+   text-shadow:
+       3px 3px 60px #000,
+     -1px -1px 50px #000,  
+      1px -1px 40px #000,
+      -1px 1px 30px #000;
+  padding: 30px;
+  color:#e11d1b;
+	font-family: Impact;
+  font-style: italic;
+  font-size: 50px;
+  line-height: 45px;
+}
+
+#heading h3{
+  margin-top:-60px;
+  font-size:25px;
+  color:white;
+  font-style: normal;
+  -webkit-text-stroke: 1px red;  
+   text-shadow:
+       3px 3px 5px #000,
+     -1px -1px 5px #000,  
+      1px -1px 5px #000,
+      -1px 1px 5px #000;
+}
+
+#heading p{
+  color:white;
+  margin-top:-35px;
+}
+
+#quote-box {
+  background-color:rgba(255,255,255,.8);
+  background-size:contain;
+  border-radius:10px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom:50px;
+  width: 80%;
+}
+
+#quote-box blockquote{
+  font-family:Charcoal,cursive;
+  font-size: 20px;
+  border-width:0;
+  color:black;
+  line-height: 50px;
+}
+
+.button{
+  margin:10px;
+  /*
+  margin-left:20px;
+  margin-right:20px;
+  margin-top
+  */
+  display: inline-block;
+  color: #666;
+  background-color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-bottom-width: 3px;
+  
+}
+
+.button:hover {
+  background-color: #e3e3e3;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.button:active {
+  background-color: #CCC;
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+.button p{
+  margin:0 auto;
+}
+
+#buttons{
+  margin-top:100px;
+}
+
+#tweet-button{
+  color:white;
+  font-family:arial;
+  background-color:#0084B4;
+}
+
+#quote-button{
+  color:black;
+  width:300px;
+}
+
+#tweet-button:hover {
+  color:black;
+}
+
+.button:active {
+  background-color: #CCC;
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+#pg13check{
+  width:20px;
+  height:20px;
+}
+
+label{
+  color:white;
+  font-family:arial;
+  font-size:15px;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#000;
+}
+#footer p{
+  color:white;
+}
