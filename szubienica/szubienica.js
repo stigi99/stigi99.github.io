@@ -20,9 +20,9 @@ haslo = haslo.toUpperCase();
 var dlugosc = haslo.length;
 var ile_skuch = 0;
 
-var yes = new Audio("yes.wav");
-var no = new Audio("no.wav");
-
+var yes = new Audio("yes.mp3");
+var no = new Audio("no.mp3");
+var cry = new Audio("cry.mp3")
 var haslo1 = "";
 
 for (i=0; i<dlugosc; i++)
@@ -145,10 +145,15 @@ function sprawdz(nr)
 	}
 	
 	//wygrana
-	if (haslo == haslo1)
-	document.getElementById("alfabet").innerHTML  = "Tak jest! Podano prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
-	
+	if (haslo == haslo1){
+
+	document.getElementById("alfabet").innerHTML  = 
+	"Tak jest! Podano prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span><video width="320" height="240" autoplay loop ontrols><source src="red21.mp4" type="video/mp4">';
+	ahh.play();}
 	//przegrana
-	if (ile_skuch>=9)
-	document.getElementById("alfabet").innerHTML  = "Przegrana! Prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
+	if (ile_skuch>=9){
+	cry.play();
+	document.getElementById("alfabet").innerHTML  =
+	 "Przegrana! Prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span><iframe src="https://giphy.com/embed/TW8Ma1a8ZsZ8I" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/TW8Ma1a8ZsZ8I">via GIPHY</a></p>';
+}
 }
