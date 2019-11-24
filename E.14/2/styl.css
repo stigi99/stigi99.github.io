@@ -1,0 +1,49 @@
+body{
+    background: #eeeeee;
+}
+#contener{
+width:1000px;
+
+margin: auto;
+text-align: center;
+
+}
+nav, footer{
+    background: #c0c0c0;
+    height: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    }
+logo{
+    width:400px;
+    height: 100px;
+}
+#menu{
+    width: 600px;
+    height: 100px;
+}
+#baner{
+    background: #dddddd;
+    height: 200px;
+    }
+main{
+    margin:50px;
+
+}
+footer{
+    text-align: right;
+}
+a{
+    color:#555555;
+    margin: 50px;
+    font-size: 200%;
+
+}
+hr{
+    background: #c0c0c0;
+    width: 70%;
+    height: 2px;
+}
+table{
+    text-align: left;
+}
