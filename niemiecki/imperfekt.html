@@ -7,6 +7,9 @@
     border: 3px solid black;
 
   } */
+  tr,td{
+    border:1px solid black;
+  }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" media="all"
@@ -27,6 +30,9 @@
         $("#zasady").fadeToggle();
       })
       $("#tabela").dynatable();
+      $("#nowe_zdania").click(function () {
+        $("#nowezdania").fadeToggle();
+      })
 
     });
 
@@ -36,16 +42,124 @@
 <body style=" background-color: darkgrey; font-family: 'Lato', sans-serif; text-align: center;">
   <h4 id="zdania1">Kliknij żeby zobaczyć przykladowe zdania</h4>
   <h4 id="zasady1"> Kliknij żeby zobaczyć zasady tworzenia</h4>
+  <h4 id="nowe_zdania"> Kliknij żeby zobaczyć nowe zdania </h4>
+  <table id="nowezdania" style="display: none; table-layout: auto; text-align: left; margin:auto; background: white;">
+    <tr>
+      <td>Lp.</td>
+      <td>Polskie</td>
+      <td>Niemieckie</td>
+    <tr>
+      <td>1.</td>
+      <td>Boli mnie głowa i brzuch</td>
+      <td>Der kopf und bauch tut mir weh</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Od wczoraj mam gorączkę</td>
+      <td>Ich habe seit gestern Fieber</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Ty wyglądasz źle</td>
+      <td>Du siechst schlecht aus</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>On ma chrypkę</td>
+      <td>Er hat Heiserkei</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>Poszedłbym do dentysty</td>
+      <td>Ich wurde zum zahnarz gehen</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>Co panu dolega?</td>
+      <td>Was ist los mit dir?</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>Lekarz bada pacjenta</td>
+      <td>Der Arzt untersucht den Patienten</td>
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>Mam katar i kaszel</td>
+      <td>Ich habe eine Schnupfen und eine Husten</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>To jest przeziębienie</td>
+      <td>Es ist eine Erkaltung</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>Wy kichacie</td>
+      <td>Du niest</td>
+    </tr>
+    <tr>
+      <td>11.</td>
+      <td>Ona jest nerwowa</td>
+      <td>Sie ist nervos</td>
+    </tr>
+    <tr>
+      <td>12.</td>
+      <td>Gdzie jest gabinet dr. Fischera</td>
+      <td>Wo is die praxis von Dr. Fischer</td>
+    </tr>
+    <tr>
+      <td>13.</td>
+      <td>Oni muszą zażywać tabletki 3 razy dziennie po jedzeniu</td>
+      <td>Sie mussen die Tableten 3 mal taglich mach den essen einnehmen</td>
+    </tr>
+    <tr>
+      <td>14.</td>
+      <td>Czy ma pan inne dolegliwości</td>
+      <td>Haben Sie andere Beschwerden</td>
+    </tr>
+    <tr>
+      <td>15.</td>
+      <td>Mam gips i jestem zraniony</td>
+      <td>Ich habe eine Gips und bin verletz</td>
+    </tr>
+    <tr>
+      <td>16.</td>
+      <td>Kasia ma pryszcze na twarzy</td>
+      <td>Kasia hat pickel im Gezicht</td>
+    </tr>
+    <tr>
+      <td>17.</td>
+      <td>W pracy powinno się nosić kask i ubranie ochronne</td>
+      <td>Bei der Arbeitsplatz sollten ein Helm und Schutzkleidung getragen werden</td>
+    </tr>
+    <tr>
+      <td>18.</td>
+      <td>Gdy jestem chory, idę do lekarza rodzinnego</td>
+      <td>Wenn ich krank bin, gehe ich zum Hausarzt</td>
+    </tr>
+    <tr>
+      <td>19.</td>
+      <td>Gdzie jest szpital?</td>
+      <td>Wi ist das krankenhaus?</td>
+    </tr>
+    <tr>
+      <td>20.</td>
+      <td>Pielęgniarka daje zastrzyki</td>
+      <td>Die krankenschwesten gibt sitzen</td>
+    </tr>
+
+  </table>
   <p id="zasady">
     <b>Czasowniki regularne <br>
-  
-    Do tematu bezokolicznika dodajemy końcówkę „-te“. Powstała forma to forma 1. i 3. osoby liczby pojedynczej. <br>
 
-    machen (robić) -> ich mach + te = ich machte<br>
-    sagen (mówić) -> er sag + te = er sagte<br>
+      Do tematu bezokolicznika dodajemy końcówkę „-te“. Powstała forma to forma 1. i 3. osoby liczby pojedynczej. <br>
 
-    Do pozostałych form dodajemy końcówki osobowe.<br>
-   </b>
+      machen (robić) -> ich mach + te = ich machte<br>
+      sagen (mówić) -> er sag + te = er sagte<br>
+
+      Do pozostałych form dodajemy końcówki osobowe.<br>
+    </b>
 
     fragen (pytać)<br>
 
@@ -91,8 +205,9 @@
     Wo wohntet ihr? (Gdzie mieszkaliście?)<br>
 
 
-   <b> Czasowniki z tematem kończącym się na –d, -t lub grupę samogłoskową kończącą się głoską –m, -n otrzymują przed<br>
-    przyrostkiem samogłoskę –e.</b> <br>
+    <b> Czasowniki z tematem kończącym się na –d, -t lub grupę samogłoskową kończącą się głoską –m, -n otrzymują
+      przed<br>
+      przyrostkiem samogłoskę –e.</b> <br>
 
     arbeiten (pracować)<br>
 
