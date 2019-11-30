@@ -87,6 +87,14 @@ h1
 	height: 333px;
 }
 */
+ol.list-unstyled> li,a{
+	color:black;
+}
+ol.list-unstyled >li>a:hover{
+		color:grey;
+		background:sandybrown;
+}
+
 @media (max-width: 575px)
 {
 	.wpis
