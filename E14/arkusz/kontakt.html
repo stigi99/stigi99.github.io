@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="utf-8">
+    <title> Pogotowie komputerowe </title>
+</head>
+
+<body style="margin:0">
+    <div id="container">
+        <div>
+            <img src="animacja.gif" alt="animacja" id="baner">
+        </div>
+        <nav>
+            <a href="index.html"> O nas </a><a href="kontakt.html"> Kontakt </a>
+        </nav>
+        <main>
+            <section>
+                <h2> Kim jesteśmy?</h2>
+                <p> Jesteśmy firmą z wieloletnim doświadczeniem w zakresie IT </p>
+            </section>
+
+            <section>
+                <h3> Formularz kontaktowy </h3>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                Imię:
+                            </td>
+                            <td>
+                                <input type="text" name="imie" id="imie">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Nazwisko:
+                            </td>
+                            <td>
+                                <input type="text" name="nazwisko" id="nazwisko">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                E-mail:
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Usługa:
+                            </td>
+                            <td>
+                                <select id="opcje">
+                                    <option value="naprawa"> naprawa komputera </option>
+                                    <option value="odzyskiwanie"> odzyskiwanie danych </option>
+                                    <option value="problemy"> problemy z oprogramowaniem </option>
+                                    <option value="konfiguracja"> konfiguracja sieci LAN </option>
+                                    <option value="inne"> inne </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" checked> Wyślij kopię wiadomości</td>
+                        </tr>
+                        <tr>
+                            <td></td>                            
+                            <td><input type="reset" id="reset"> <input id="start" type="button" value="Prześlij" ></td>
+                        </tr>
+
+
+
+                    </table>
+                </form>
+                <div id="tekst"></div>
+            </section>
+            <section>
+                <h2> Co nas cechuje?</h2>
+                <p> Doświadczenie, niezawodność, konkurencyjne ceny</p>
+            </section>
+        </main>
+        <footer>
+            <p> Autor strony: dalej wstawiony numer <b>PESEL</b> zdającego</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("start").addEventListener("click", obslugaform);
+        function obslugaform(){
+             imie = document.getElementById("imie").value;
+             nazwisko = document.getElementById("nazwisko").value;
+             email = document.getElementById("email").value.toLowerCase();
+             // usluga = document.getElementById("opcje").value; nah 
+             wybrany = document.getElementById("opcje");
+             opcja = wybrany.options[wybrany.selectedIndex];
+             document.getElementById("tekst").innerHTML = imie + nazwisko + "<br>" + email +"</br>"+ "Usługa: "/* + usluga*/ + opcja.text;
+        }
+
+        </script>
+</body>
+
+</html>

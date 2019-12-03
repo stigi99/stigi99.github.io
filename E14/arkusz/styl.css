@@ -1,0 +1,46 @@
+body {
+    background: #99ffcc
+}
+#container{
+    width: 1000px;
+    margin: auto;
+}
+#baner{
+    height: 200px;
+    background: #99FF66;
+}
+nav{
+    background: #66CCFF;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+footer{
+    background: #66CCFF;
+    color: #006666;
+    text-align: right;
+    height: 30px;
+    margin: 20px;
+    clear: both;
+}
+nav>a{
+    color: #006666;
+    margin: 50px;
+    font-size: 200%;
+    text-decoration: none;
+}
+h2,h3{
+    text-align: center;
+}
+#reset{
+    background: #ff0000;
+}
+#start{
+    background: #00ff00;
+}
+section{
+   width: 310px;
+   padding: 10px;
+   float: left;
+   
+
