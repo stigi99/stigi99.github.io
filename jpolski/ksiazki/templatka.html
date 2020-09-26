@@ -13,9 +13,9 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
-	
+
 	<link rel="stylesheet" href="../../main.css">
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -68,7 +68,7 @@
 						</div>
 
 					</li>
-					
+
 
 					<li class="nav-item ">
 						<a class="nav-link" href="../../E14/index.html"> Arkusze e14 </a>
@@ -116,62 +116,66 @@
 					</aside>
 				-->
 
-					<div class="col-lg-8 bg-white text-body wpis">
+					<div class="col-lg-12 mt-5 bg-white text-body wpis">
 
 						<header>
 
-							<h1 id="wstep" class="h2 font-weight-bold text-uppercase ml-0 mb-4 text-center text-md-left">Template</h1>
+							<h1 id="wstep"
+								class="h2 font-weight-bold text-uppercase ml-0 mb-4 text-center text-md-left">Template
+							</h1>
 
 						</header>
 						<!-- tresc lektury -->
-						
-						
-							
-							
+						<img class="img-fluid col-lg-3 float-left" src="../img/cover.jpg" alt="cover">
+
 
 					</div>
 
-					<aside class="col-lg-4">
-
-						<img class="img-thumbnail" src="../img/inny.jpg" alt="inny">
-						
-						<h3 class="h4 my-3">Spis tresci</h3>
-						<ol class="list-unstyled ml-4">
-							<li><a href="#wstep" class="list-group-item">Informacje biograficzne o autorze</a></li>
-							<li><a href="#geneza" class="list-group-item">Geneza i pierwsze publikacje utworu</a></li>
-							<li><a href="#streszczenie" class="list-group-item">Streszczenie</a></li>
-							<li><a href="#czas" class="list-group-item">Czas i miejsce akcji</a></li>
-							<li><a href="#kompozycja" class="list-group-item">Kompozycja</a></li>
-							<li><a href="#sposob" class="list-group-item">Sposób prowadzenia narracji</a></li>
-								<ul class="list-unstyled ml-5">
-									<li><a href="#autor" class="list-group-item">Autor-bohater-narrator</a></li>
-									<li><a href="#dokument" class="list-group-item">Dokument i literatura</a></li>
-									<li><a href="#jezyk" class="list-group-item">Język</a></li>
-									<li><a href="#elementy" class="list-group-item">Elementy autobiograficzne</a></li>
-								</ul>
-							<li><a href="#bohaterowie" class="list-group-item">Bohaterowie</a></li>
-								<ul class="list-unstyled ml-5" >
-									<li ><a href="#czlowiek" class="list-group-item">Człowiek w obozie</a></li>
-									<li><a href="#praca" class="list-group-item">Praca</a></li>
-									<li><a href="#cierpienie" class="list-group-item">Cierpienie</a></li>
-								</ul>
-								<li><a href="#relacja" class="list-group-item">Relacja międzyludzkie i zagadnienia moralne</a></li>
-								<li><a href="#analiza" class="list-group-item">Analiza totalitaryzmu</a></li>
-								<li><a href="#inny" class="list-group-item">Inny Świat wobec znanych wypowiedzi o życiu w obozie</a></li>
-								<li><a href="#znaczenie" class="list-group-item">Znaczenie obozu</a></li>
-								
-						</ol>
-						
-						
-
-					</aside>
 				
+
+						
+
+						<div id="lista"
+							style=" display:none;position: fixed; right:0; top:100px; background: cornsilk; border-radius: 25px 0px 0px 25px; padding: 2px; z-index: 2; ">
+							<ol class="list-unstyled ml-4 text-right">
+								<button class="btn-light" onclick="schowaj()">Schowaj spis treści</button>
+								<li><a href="#wstep" class="">Informacje biograficzne o autorze</a></li>
+								<li><a href="#geneza" class="">Geneza i pierwsze publikacje utworu</a></li>
+								<li><a href="#streszczenie" class="">Streszczenie</a></li>
+								<li><a href="#czas" class="">Czas i miejsce akcji</a></li>
+								<li><a href="#kompozycja" class="">Kompozycja</a></li>
+								<li><a href="#sposob" class="">Sposób prowadzenia narracji</a></li>
+								<ul class="list-unstyled ml-5">
+									<li><a href="#autor" class="">Autor-bohater-narrator</a></li>
+									<li><a href="#dokument" class="">Dokument i literatura</a></li>
+									<li><a href="#jezyk" class="">Język</a></li>
+									<li><a href="#elementy" class="">Elementy autobiograficzne</a></li>
+								</ul>
+								<li><a href="#bohaterowie" class="">Bohaterowie</a></li>
+								<ul class="list-unstyled ml-5">
+									<li><a href="#czlowiek" class="">Człowiek w obozie</a></li>
+									<li><a href="#praca" class="">Praca</a></li>
+									<li><a href="#cierpienie" class="">Cierpienie</a></li>
+								</ul>
+								<li><a href="#relacja" class="">Relacja międzyludzkie i zagadnienia moralne</a></li>
+								<li><a href="#analiza" class="">Analiza totalitaryzmu</a></li>
+								<li><a href="#inny" class="">Inny Świat wobec znanych wypowiedzi o życiu w obozie</a>
+								</li>
+								<li><a href="#znaczenie" class="">Znaczenie obozu</a></li>
+
+							</ol>
+						</div>
+						<button id="pokazliste" onclick="pokaz()" class=""
+							style=" margin-top: 300px;position: fixed; right: 0; z-index: 1;"><img style="width:10px; height:10px" src="../img/spis.png"></button>
+						
+					
 				</div>
 
 			</div>
 
 		</article>
-		<div style="position: fixed; bottom: 10px; right: 10px;"><a href="#wstep"><img src="img/arrow.png" style="width:50px; height: 50px;"></a></div>
+		<div style="position: fixed; bottom: 10px; right: 10px;"><a href="#wstep"><img src="../img/arrow.png"
+					style="width:50px; height: 50px;"></a></div>
 
 	</main>
 
@@ -184,6 +188,16 @@
 		crossorigin="anonymous"></script>
 
 	<script src="../../js/bootstrap.min.js"></script>
+	<script>
+		function schowaj() {
+			$("#lista").hide();
+
+		}
+		function pokaz() {
+			$("#lista").show();
+		}
+	</script>
+
 
 </body>
 
